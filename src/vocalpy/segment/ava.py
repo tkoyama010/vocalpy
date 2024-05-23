@@ -513,4 +513,4 @@ def ava(
     onsets_sample = (onsets * sound.samplerate).astype(int)
     offsets_sample = (offsets * sound.samplerate).astype(int)
     lengths = offsets_sample - onsets_sample
-    return Segments(start_inds=onsets_sample, lengths=lengths, sound=sound)
+    return Segments(start_inds=onsets_sample, lengths=lengths, samplerate=sound.samplerate)
